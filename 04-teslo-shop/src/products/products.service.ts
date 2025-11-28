@@ -136,10 +136,6 @@ export class ProductsService {
         product.images = images.map(
           image => this.productImageRepository.create({url: image})
         );
-      } else {
-
-
-
       }
 
       await queryRunner.manager.save(product);
